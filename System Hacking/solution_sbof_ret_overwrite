@@ -1,0 +1,5 @@
+8바이트는 buf
+8바이트는 sfp
+나머지 8바이트는 return address
+
+그래서 gets로 buf 값을 받을 때 0 8개(buf) + 1 8개(sfp) + A 8개(41)을 주면 return address가 AAAAAAAA가 된다.

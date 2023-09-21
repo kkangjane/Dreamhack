@@ -1,0 +1,4 @@
+스택에 name, barrier, secret순으로 쌓여있다.
+name을 read로 읽어오면서 바로 뒤에는 barrier와 secret이 있는 것이다.
+그러면 name을 12바이트 읽으면 barrier까지 채워질 수 있으며, 널도 없으면 secret까지 printf할 수 있을 것이다.
+따라서 name을 read할 때 123456789123을 하면 널이 없으므로 secret의 널까지 다 읽게 된다.
